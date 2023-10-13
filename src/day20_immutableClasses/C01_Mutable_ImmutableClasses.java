@@ -19,6 +19,8 @@ public class C01_Mutable_ImmutableClasses {
         // String method larının yaptıgı degisikler sadece o satır icin gercerli
         // kalıcı olması istersek atama yapmaliyiz
 
+        System.out.println("=========");
+
 
         List<String> isimler = new ArrayList<>();
 

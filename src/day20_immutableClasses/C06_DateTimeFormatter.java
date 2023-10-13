@@ -7,7 +7,7 @@ public class C06_DateTimeFormatter {
     public static void main(String[] args) {
 
         /*
-             yazdıgımız kodlarda zaman veya tarih ile ilgili islemlerde
+             yazdigimiz kodlarda zaman veya tarih ile ilgili islemlerde
              tarih veya zamanı istedigimiz formata tutabilmek icin
              DateTimeFormatter clası kulanabiliriz
          */
