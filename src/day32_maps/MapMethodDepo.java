@@ -186,10 +186,10 @@ public class MapMethodDepo {
         // array'deki elemanlari, yeniden value formatina sokmamiz lazim
         // String olarak "Ali-Celik-11-K-TM" elde ederiz
         String yeniValue = ogrenciValueArr[0] + "-" +
-                           ogrenciValueArr[1] + "-" +
-                           ogrenciValueArr[2] + "-" +
-                           ogrenciValueArr[3] + "-" +
-                           ogrenciValueArr[4];
+                ogrenciValueArr[1] + "-" +
+                ogrenciValueArr[2] + "-" +
+                ogrenciValueArr[3] + "-" +
+                ogrenciValueArr[4];
 
         // elimizde key var(ogrenciNo),elimizde yeni value de var
         ogrenciMap.put(ogrenciNo, yeniValue);
@@ -222,10 +222,10 @@ public class MapMethodDepo {
             // map'i update edebilmek icin
             // array'i value formatina uygun String'e donusturelim
             String yeniValue = valueArr[0] + "-" +
-                               valueArr[1] + "-" +
-                               valueArr[2] + "-" +
-                               valueArr[3] + "-" +
-                               valueArr[4];
+                    valueArr[1] + "-" +
+                    valueArr[2] + "-" +
+                    valueArr[3] + "-" +
+                    valueArr[4];
 
 
             // key ve yeni value'yu kullanarak
@@ -265,10 +265,10 @@ public class MapMethodDepo {
             }
 
             String yeniValue = valueArr[0] + "-" +
-                               valueArr[1] + "-" +
-                               valueArr[2] + "-" +
-                               valueArr[3] + "-" +
-                               valueArr[4];
+                    valueArr[1] + "-" +
+                    valueArr[2] + "-" +
+                    valueArr[3] + "-" +
+                    valueArr[4];
 
             ogrenciMap.put(each, yeniValue);
         }
@@ -280,23 +280,23 @@ public class MapMethodDepo {
 
         // numara, isim, soyisim
 
-        Set<Map.Entry<Integer,String>> entrySeti  = ogrenciMapi.entrySet();
+        Set<Map.Entry<Integer, String>> entrySeti = ogrenciMapi.entrySet();
 
         // entry'leri elden gecirip
         // sinif ve sube bilgisi istenen degere esit olanlari yazdiralim
         String eachValue;
         String[] valueArr;
-        System.out.println("======="+sinif+"/"+sube+" sinif listesi========");
+        System.out.println("=======" + sinif + "/" + sube + " sinif listesi========");
 
-        for (Map.Entry<Integer, String> eachEntry : entrySeti ){
+        for (Map.Entry<Integer, String> eachEntry : entrySeti) {
             // eachEntry ==>  110=Azim-Kayisi-11-K-TM
 
-            eachValue  = eachEntry.getValue(); // Azim-Kayisi-11-K-TM
+            eachValue = eachEntry.getValue(); // Azim-Kayisi-11-K-TM
             valueArr = eachValue.split("-"); // [Ali, Cem, 11, C, TM]
 
-            if (valueArr[2].equals(sinif) && valueArr[3].equalsIgnoreCase(sube)){
+            if (valueArr[2].equals(sinif) && valueArr[3].equalsIgnoreCase(sube)) {
 
-                System.out.println(eachEntry.getKey() + " " + valueArr[0] +" " +valueArr[1]);
+                System.out.println(eachEntry.getKey() + " " + valueArr[0] + " " + valueArr[1]);
             }
 
         }
@@ -305,14 +305,14 @@ public class MapMethodDepo {
     public static Map<Integer, String> isimDuzenle(Map<Integer, String> ogrenciMapi) {
 
         // bir entrySeti olusturalim
-        Set<Map.Entry<Integer,String>> entrySeti = ogrenciMapi.entrySet();
+        Set<Map.Entry<Integer, String>> entrySeti = ogrenciMapi.entrySet();
 
         String eachValue;
         String[] valueArr;
         String isim;
 
         // herbir entry'i ele almak icin for-each kullanalim
-        for (Map.Entry<Integer,String> eachEntry : entrySeti
+        for (Map.Entry<Integer, String> eachEntry : entrySeti
         ) {
             // herbir entry'deki value'yu alalim
             eachValue = eachEntry.getValue();
@@ -321,13 +321,13 @@ public class MapMethodDepo {
             // array[0] de bulunan isim bilgisini istenen formata getirelim
 
             isim = valueArr[0];
-            valueArr[0] = isim.substring(0,1).toUpperCase()+isim.substring(1).toLowerCase();
+            valueArr[0] = isim.substring(0, 1).toUpperCase() + isim.substring(1).toLowerCase();
             // map'i update edebilmek icin array'i String olarak birlestirelim
-            String yeniValue =  valueArr[0] + "-" +
-                                valueArr[1] + "-" +
-                                valueArr[2] + "-" +
-                                valueArr[3] + "-" +
-                                valueArr[4];
+            String yeniValue = valueArr[0] + "-" +
+                    valueArr[1] + "-" +
+                    valueArr[2] + "-" +
+                    valueArr[3] + "-" +
+                    valueArr[4];
 
             // setEntryValue() ile guncellenen value'yu update edelim
             eachEntry.setValue(yeniValue);
@@ -335,17 +335,18 @@ public class MapMethodDepo {
 
         return ogrenciMapi;
     }
+
     public static Map<Integer, String> soyisimleriBuyukHarfYap(Map<Integer, String> ogrenciMap) {
 
         // bir entrySeti olusturalim
-        Set<Map.Entry<Integer,String>> entrySeti = ogrenciMap.entrySet();
+        Set<Map.Entry<Integer, String>> entrySeti = ogrenciMap.entrySet();
 
         String eachValue;
         String[] valueArr;
         String soyIsim;
 
         // herbir entry'i ele almak icin for-each kullanalim
-        for (Map.Entry<Integer,String> eachEntry : entrySeti
+        for (Map.Entry<Integer, String> eachEntry : entrySeti
         ) {
 
             // herbir entry'deki value'yu alalim
@@ -359,11 +360,11 @@ public class MapMethodDepo {
             valueArr[1] = soyIsim.toUpperCase();
 
             // map'i update edebilmek icin array'i String olarak birlestirelim
-            String yeniValue =  valueArr[0] + "-" +
-                                valueArr[1] + "-" +
-                                valueArr[2] + "-" +
-                                valueArr[3] + "-" +
-                                valueArr[4];
+            String yeniValue = valueArr[0] + "-" +
+                    valueArr[1] + "-" +
+                    valueArr[2] + "-" +
+                    valueArr[3] + "-" +
+                    valueArr[4];
 
             // setEntryValue() ile guncellenen value'yu update edelim
             eachEntry.setValue(yeniValue);
@@ -371,6 +372,39 @@ public class MapMethodDepo {
         return ogrenciMap;
     }
 
+    public static Map<String, Object> rezervasyonOlustur(String firstname, String lastname, int totalprice,
+                                                         boolean depositpaid, String checkin,
+                                                         String checkout, String additionalneeds) {
+    /*
+         {
+            "firstname" : "Ahmet",
+            "lastname" : "Bulut",
+            "totalprice" : 500,
+            "depositpaid" : false,
+            "bookingdates" : {
+                   "checkin" : "2023-07-21",
+                   "checkout" : "2023-08-10"
+                      },
+            "additionalneeds" : "wi-fi" }
+         */
+        Map<String, Object> rezervasyonMap = new HashMap<>();
+
+        rezervasyonMap.put("firstname", firstname);
+        rezervasyonMap.put("lastname", lastname);
+        rezervasyonMap.put("totalprice", totalprice);
+        rezervasyonMap.put("depositpaid", depositpaid);
+
+
+        Map<String, String> innerMap = new HashMap<>();
+        innerMap.put("checkin", checkin);
+        innerMap.put("checkout", checkout);
+
+        rezervasyonMap.put("bookingdates", innerMap);
+        rezervasyonMap.put("additionalneeds", additionalneeds);
+
+        return rezervasyonMap;
+    }
 }
+
 
 

@@ -14,7 +14,7 @@ public class C09_DoWhileLoop {
         int sayı= 0;
 
         do {
-            System.out.println("Lütfen toplanmka üzere bir sayı giriniz\nişlemi bitirmek için 0' a basınız");
+            System.out.println("Lütfen toplanmak üzere bir sayı giriniz\nişlemi bitirmek için 0' a basınız");
             sayı = scanner.nextInt();
 
             toplam += sayı;
