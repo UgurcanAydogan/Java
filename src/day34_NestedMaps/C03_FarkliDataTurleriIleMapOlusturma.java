@@ -10,6 +10,18 @@ public class C03_FarkliDataTurleriIleMapOlusturma {
 
         /*
 
+        Eger value olarak farkli data turlerinden degerler girilecekse
+        Map olusturulurken Map<? , Object> secilebilir
+
+        Eger value data turu olarak Object secilirse
+        value'lara erismek istedigimizde
+        casting yapmamiz gerekebilir
+
+        */
+
+
+        /*
+
          {
             "firstname" : "Ahmet",
             "lastname" : "Bulut",
@@ -44,5 +56,30 @@ public class C03_FarkliDataTurleriIleMapOlusturma {
            lastname=Yan
            }
          */
+
+        // firstname'i yazdirin
+
+        System.out.println(bookingMap.get("firstname")); // Hasan
+
+        // depositpaid yazdirin
+
+        System.out.println(bookingMap.get("depositpaid")); // true
+
+        // checkin yazdirin
+
+        System.out.println(((Map) bookingMap.get("bookingdates")).get("checkin")); // 2023-10-21
+
+        System.out.println(((Map) bookingMap.get("bookingdates")).get("checkout")); // 2023-10-25
+
+
+        // totalprice'i 300 olarak update edin
+
+        bookingMap.put("totalprice",300);
+
+        // checkin degerini 2023-10-18 olarak update edelim
+
+        ((Map<String, String>) bookingMap.get("bookingdates")).put("checkin","2023-10-18");
+
+        System.out.println(bookingMap);
     }
 }
